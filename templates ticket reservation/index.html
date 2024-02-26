@@ -35,13 +35,13 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Account</a></li>
+							<li><a href="#" id="accountLink">Account</a></li>
 							<li><a href="generic.html">Settings</a></li>
 							<li><a href="generic.html">Logout</a></li>
 							<li><a href="elements.html">Elements</a></li>
 						</ul>
 					</nav>
-
+				
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
@@ -51,73 +51,79 @@
 							<section class="tiles">
 								<article class="style1">
 									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
+										<img src="images/decAvepix.jpg" alt="" />
 									</span>
 									<a href="decAve.html">
 										<h2>December Avenue</h2>
 										<div class="content">
 											<p>5-piece indie pop/alternative rock band from Manila, Philippines known for their viral compositions online. The band is one of the most streamed OPM bands of all-time</p>
-											<p>Ticket Sold : 100  Ticket Available : 50</p>
+											<p>Ticket Sold : 100 <br>
+											Ticket Available : 50</p>
 										</div>
 									</a>
 								</article>
 								<article class="style2">
 									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
+										<img src="images/keshipix.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Keshi</h2>
 										<div class="content">
 											<p>Casey Thai Luong, known professionally as Keshi, is a Vietnamese American singer, songwriter, record producer, and multi-instrumentalist. He is best known for his songs "Like I Need U", "Limbo", and "Drunk".</p>
-											<p>Ticket Sold : 1000  Ticket Available : 5</p>
+											<p>Ticket Sold : 1000 <br>
+											Ticket Available : 5</p>
 										</div>
 									</a>
 								</article>
 								<article class="style3">
 									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
+										<img src="images/dionelapix.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Dionela</h2>
 										<div class="content">
 											<p>The term ‘hidden gem‘ embodies the idea of a captivating treasure that is not yet widely known. Hence, Dionela, the Filipino vocalist, epitomizes the essence of this concept. He is the hidden gem of Original Pilipino Music (OPM) that deserves greater acknowledgment.</p>
-											<p>Ticket Sold : 50, Ticket Available : 25</p>
+											<p>Ticket Sold : 50 <br>
+											Ticket Available : 25</p>
 										</div>
 									</a>
 								</article>
 								<article class="style4">
 									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
+										<img src="images/sugarCanepix.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Sugarcane</h2>
 										<div class="content">
 											<p>The band, known for its distinctive songwriting that melds emotional melodies with sincere lyricism and storytelling, has recently been added to the expanding roster of Warner Music Philippines.</p>
-											<p>Ticket Sold : 50, Ticket Available : 25</p>
+											<p>Ticket Sold : 50 <br>
+											Ticket Available : 25</p>
 										</div>
 									</a>
 								</article>
 								<article class="style5">
 									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
+										<img src="images/zackTabpix.jpg" alt="" />
 									</span>
 									<a href="generic.html">
 										<h2>Zack Tabudlo</h2>
 										<div class="content">
 											<p>Filipino singer-songwriter and musician. His debut single "Nangangamba" was released in 2020. His song "Binibini", released in 2021, broke a record as the top local song on Spotify's Philippines charts.</p>
-											<p>Ticket Sold : 50, Ticket Available : 25</p>
+											<p>Ticket Sold : 50 <br>
+											Ticket Available : 25</p>
 										</div>
 									</a>
 								</article>
 								<article class="style6">
 									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
+										<img src="images/auroraMfpix.jpg" alt="" />
 									</span>
 									<a href="auroraFest.html">
 										<h2>Clark Aurora Music Festival</h2>
 										<div class="content">
 											<p>Get ready for another music-filled weekend as the Philippine’s Largest Music Festival returns to Clark this coming April 06-07, 2024!</p>
-											<p>Ticket Sold : 50, Ticket Available : 25</p>
+											<p>Ticket Sold : 50 <br>
+											Ticket Available : 25</p>
 										</div>
 									</a>
 								</article>
@@ -175,5 +181,11 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-	</body>
+      <script>
+        document.getElementById('accountLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('accountProfile').style.display = 'block';
+        });
+    </script>
+</body>
 </html>
