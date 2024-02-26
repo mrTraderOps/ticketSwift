@@ -6,6 +6,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		/* CSS for moving background image effect */
+        .image.main {
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            animation: changeBackground 2s infinite linear; /* Adjust duration as needed */
+        }
+
+        @keyframes changeBackground {
+            0%, 100% {
+                background-image: url('auroraBGpix.jpg'); /* Start and end with the first background image */
+            }
+            50% {
+                background-image: url('auroraBG2pix.jpg'); /* Transition to the second background image */
+            }
+        }
+    </style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -35,9 +54,9 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="generic.html">Account</a></li>
+							<li><a href="generic.html">Settings</a></li>
+							<li><a href="generic.html">Logout</a></li>
 							<li><a href="elements.html">Elements</a></li>
 						</ul>
 					</nav>
@@ -46,7 +65,7 @@
 					<div id="main">
 						<div class="inner">
 							<h1>CLARK AURORA MUSIC FESTIVAL</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+							<span class="image main"><img src="images/auroraBGpix.jpg" alt="" /></span>
 							<p>This is the first description, what is the event all about for/why does the concert takes place in this area? location of event? when is this event</p>
 							<p>This is the second description, details about reservation how many level such as Bronze, Silver, Gold, VIP seat available tickets, tickets sold.</p>					
 
