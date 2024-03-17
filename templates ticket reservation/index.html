@@ -10,7 +10,10 @@
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
-
+			<!-- Ticker -->
+				<div id="ticker">
+					Welcome to TicketSwift! | From screen to stage, your ticket awaits. | Reserve your tickets now!
+				</div>
 				<!-- Header -->
 					<header id="header">
 						<div class="inner">
@@ -130,7 +133,6 @@
 							</section>
 						</div>
 					</div>
-
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
@@ -181,11 +183,23 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-      <script>
-        document.getElementById('accountLink').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('accountProfile').style.display = 'block';
-        });
-    </script>
-</body>
+			<script>
+				document.getElementById('accountLink').addEventListener('click', function(event) {
+					event.preventDefault();
+					document.getElementById('accountProfile').style.display = 'block';
+				});
+
+				// ticker content
+				var newsItems = ['Welcome to TicketSwift!', 'From screen to stage, your ticket awaits.', 'Reserve your tickets now!'];
+				var tickerText = document.getElementById('ticker');
+				var newsIndex = 0;
+
+				function updateTicker() {
+					tickerText.textContent += ' || ' + newsItems[newsIndex];
+					newsIndex = (newsIndex + 1) % newsItems.length;
+				}
+
+				setInterval(updateTicker, 3000); // Update ticker every 3 seconds
+			</script>
+	</body>
 </html>

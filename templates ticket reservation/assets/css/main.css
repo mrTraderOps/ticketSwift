@@ -3156,6 +3156,36 @@ input, select, textarea {
 
 		}
 
+/* Ticker */
+	#ticker {
+		background-color: #333;
+		color: #fff;
+		padding: 0px 5px;
+		overflow: hidden;
+		white-space: nowrap;
+		animation: tickerAnimation 20s linear infinite;
+		width: 1500px;
+		height: 30px;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-weight: 900;
+		border-radius: 5px;	
+			
+	}
+
+	#header {
+		padding-top: 30px;
+	}			
+
+	@keyframes tickerAnimation {
+		0% { transform: translateX(100%); }
+		100% { transform: translateX(-100%); }
+	}
+
+	#ticker span {
+		animation: tickerAnimation 10s linear infinite; /* Adjust animation duration as needed */
+		display: inline-block;
+	}
+
 /* Footer */
 
 	#footer {
@@ -3321,67 +3351,5 @@ input, select, textarea {
 			}
 
 		}
-		
-/* account.profile */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 500px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.form-group input[type="text"],
-.form-group input[type="file"],
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.form-group input[type="file"] {
-    cursor: pointer;
-}
-
-.form-group img {
-    max-width: 100px;
-    height: auto;
-    display: block;
-    margin-top: 10px;
-}
-
-.form-group .edit-profile-btn {
-    background-color: #808080; /* Gray background */
-    color: #fff; /* White text */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth effect */
-}
-
-.form-group .edit-profile-btn:hover {
-    background-color: #f2849e; /* Pink background on hover */
-    color: #fff; /* White text on hover */
-}
+			
