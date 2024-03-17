@@ -3,71 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/createAccount.css" />
+    <link rel="stylesheet" href="assets/css/createAcc.css" />
     <noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
-    <title>Create Account</title>
+<title>Create Account Form</title>
+<style>
+    body {
+        background-image: url("images/createAccountBG.gif"); /* Background GIF */
+        background-size: cover;
+        background-position: center ;
+    }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h2 style="letter-spacing: 5px; font-weight: bolder; color: #DE3263; text-align: center;">REGISTRATION</h2>
-        <form action="#" method="POST">
-            <div class="input-row">
-                <div class="form-group full-width">
-                    <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
-                </div>
-                <div class="form-group full-width">
-                    <label for="lastname">Last Name:</label>
-                    <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
-                </div>
-                <div class="form-group full-width">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
-                <div class="form-group full-width select-wrapper">
-                    <label for="gender">Gender:</label>
-                    <select id="gender" name="gender" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group full-width username">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            </div>
-            <div class="input-row">
-                <div class="form-group full-width password-toggle">
-                    <label for="password">Set Password:</label>
-                    <div class="input-box">
-                    <input style="font-weight: bold;" type="password" id="password" name="password" placeholder="Enter your password" required>
-                    <img class="toggle-icon" src="images/showPass.png" alt="Toggle Password Visibility" onclick="togglePasswordVisibility('password')">
-                </div>
-                <div class="form-group full-width password-toggle">
-                    <label for="confirm_password">Confirm Password:</label>
-                    <div class="input-box">
-                    <input style="font-weight: bold;" type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
-                    <img class="toggle-icon" src="images/showPass.png" alt="Toggle Password Visibility" onclick="togglePasswordVisibility('confirm_password')">
-                </div>
-            </div>
-        </div>
-            <div class="form-group full-width">
-                <input type="checkbox" id="agreeTermsCheckbox">
-                <label for="agreeTermsCheckbox">I agree to the <a href="#" id="termsLink" onclick="showTerms()">terms & conditions</a></label>
-            </div>
-            <button type="submit">Create Account</button>
-        </form>
+<div class="container">
+    <h2 style="letter-spacing: 2px; color: #DE3263;">CREATE ACCOUNT</h2>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+        <button class="continue-button" id="continueEmailBtn">Continue</button>
     </div>
+    <div class="form-group" id="firstNameGroup" style="display: none;">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" placeholder="Enter your first name">
+        <button class="continue-button" id="continueFirstNameBtn">Continue</button>
+    </div>
+    <div class="form-group" id="lastNameGroup" style="display: none;">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" placeholder="Enter your last name">
+        <button class="continue-button" id="continueLastNameBtn">Continue</button>
+    </div>
+    <div class="form-group" id="usernameGroup" style="display: none;">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username">
+        <button class="continue-button" id="continueUsernameBtn">Continue</button>
+    </div>
+    <div class="form-group" id="genderGroup" style="display: none;">
+        <label for="gender">Gender:</label>
+        <select id="gender">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other</option>
+        </select>
+        <button class="continue-button" id="continueGenderBtn">Continue</button>
+    </div>
+    <div class="form-group" id="passwordGroup" style="display: none;">
+        <label for="password">Set Password:</label>
+        <input type="password" id="password" placeholder="Enter your password">
+        <img class="toggle-icon" src="images/showPass.png" alt="Toggle Password Visibility" onclick="togglePasswordVisibility('password')" style="width: 50px;">
+        <button class="continue-button" id="continuePasswordBtn">Continue</button>
+    </div>
+    <div class="form-group" id="confirmPasswordGroup" style="display: none;">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm your password">
+        <img class="toggle-icon" src="images/showPass.png" alt="Toggle Password Visibility" onclick="togglePasswordVisibility('confirmPassword')" style="width: 50px;">
+        <button class="continue-button" id="continueConfirmPasswordBtn">Continue</button>
+    </div>
+    <div class="terms">
+        <label><input type="checkbox" id="agreeToTerms"> By creating an account, you agree to the <a href="#" id="termsLink">Terms of Service</a>.</label>
+    </div>
+    <button id="createAccountBtn" style="display: none;">Create Account</button>
+</div>
 
-    <!-- Terms Modal -->
-    <div id="termsModal">
-        <div id="termsContainer">
-            <!-- Container for terms and conditions -->
-            <span class="close-btn" onclick="hideTerms()">&times;</span>
-            <h4>Terms & Conditions</h4>
-            <p style="font-size: 15px; font-weight: bold; margin-bottom: 10px;"><em>Welcome to TicketSwift!</em></p>
-                <p>
+<div id="termsModal">
+    <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <h3>TERMS AND CONDITIONS OF TICKETSWIFT</h3>
+        <p>
                     <b>Please read the terms and conditions carefully before creating an account on our ticket reservation platform.</b><br>
                     <br>
                     1. Account Creation and Usage<br>
@@ -123,34 +124,133 @@
                         • For support, inquiries, or feedback, please contact us at ticketSwift.reservation@gmail.com.<br>
                     </p>
                     <p style="font-weight: bolder; margin-bottom: 10px; font-style: italic;">By creating an account, you acknowledge that you have read, understood, and agree to be bound by these terms and conditions.</p>
-        </div>
+        </p>
+        <button class="scroll-up" id="scrollUpBtn">&uarr;</button>
     </div>
+</div>
 
 <script>
-    function showTerms() {
-        var modal = document.getElementById("termsModal");
-        modal.style.display = "block";
-        document.body.style.overflow = "hidden"; // Disable scrolling on body
-    }
+    const emailInput = document.getElementById('email');
+    const firstNameGroup = document.getElementById('firstNameGroup');
+    const lastNameGroup = document.getElementById('lastNameGroup');
+    const usernameGroup = document.getElementById('usernameGroup');
+    const genderGroup = document.getElementById('genderGroup');
+    const passwordGroup = document.getElementById('passwordGroup');
+    const confirmPasswordGroup = document.getElementById('confirmPasswordGroup');
+    const continueEmailBtn = document.getElementById('continueEmailBtn');
+    const continueFirstNameBtn = document.getElementById('continueFirstNameBtn');
+    const continueLastNameBtn = document.getElementById('continueLastNameBtn');
+    const continueUsernameBtn = document.getElementById('continueUsernameBtn');
+    const continueGenderBtn = document.getElementById('continueGenderBtn');
+    const continuePasswordBtn = document.getElementById('continuePasswordBtn');
+    const continueConfirmPasswordBtn = document.getElementById('continueConfirmPasswordBtn');
+    const createAccountBtn = document.getElementById('createAccountBtn');
+    const termsLink = document.getElementById('termsLink');
+    const agreeToTerms = document.getElementById('agreeToTerms');
+    const termsModal = document.getElementById('termsModal');
+    const closeModal = document.getElementById('closeModal');
+    const scrollUpBtn = document.getElementById('scrollUpBtn');
 
-    function hideTerms() {
-        var modal = document.getElementById("termsModal");
-        modal.style.display = "none";
-        document.body.style.overflow = "auto"; // Enable scrolling on body
-    }
-
-    function togglePasswordVisibility(fieldId) {
-            var passwordField = document.getElementById(fieldId);
-            var toggleIcon = passwordField.nextElementSibling;
-            if (passwordField.type === "password") {
-                passwordField.type = "text";
+    function togglePasswordVisibility(inputId) {
+        const passwordInput = document.getElementById(inputId);
+        const toggleIcon = passwordInput.nextElementSibling;
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
                 toggleIcon.src = "images/hidePass.png"; /* Change to hidePass.png */
             } else {
-                passwordField.type = "password";
+                passwordInput.type = "password";
                 toggleIcon.src = "images/showPass.png"; /* Change to showPass.png */
             }
         }
-</script>
 
+    continueEmailBtn.addEventListener('click', function() {
+        if (emailInput.value.trim() !== '') {
+            firstNameGroup.style.display = 'block';
+        } else {
+            alert('Please enter your email.');
+        }
+    });
+
+    continueFirstNameBtn.addEventListener('click', function() {
+        if (document.getElementById('firstName').value.trim() !== '') {
+            lastNameGroup.style.display = 'block';
+        } else {
+            alert('Please enter your first name.');
+        }
+    });
+
+    continueLastNameBtn.addEventListener('click', function() {
+        if (document.getElementById('lastName').value.trim() !== '') {
+            usernameGroup.style.display = 'block';
+        } else {
+            alert('Please enter your last name.');
+        }
+    });
+
+    continueUsernameBtn.addEventListener('click', function() {
+        if (document.getElementById('username').value.trim() !== '') {
+            genderGroup.style.display = 'block';
+        } else {
+            alert('Please enter your username.');
+        }
+    });
+
+    continueGenderBtn.addEventListener('click', function() {
+        passwordGroup.style.display = 'block';
+    });
+
+    continuePasswordBtn.addEventListener('click', function() {
+        confirmPasswordGroup.style.display = 'block';
+    });
+
+    continueConfirmPasswordBtn.addEventListener('click', function() {
+        const password = document.getElementById('password').value.trim();
+        const confirmPassword = document.getElementById('confirmPassword').value.trim();
+        if (confirmPassword !== '' && password === confirmPassword) {
+            createAccountBtn.style.display = 'block';
+        } else {
+            alert('Passwords do not match.');
+        }
+    });
+
+    createAccountBtn.addEventListener('click', function() {
+        if (agreeToTerms.checked) {
+            alert('Account created successfully!');
+            // Here you can add code to submit the form data or perform any other actions
+        } else {
+            alert('Please agree to the Terms of Service.');
+        }
+    });
+
+    termsLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        termsModal.style.display = 'flex';
+    });
+
+    closeModal.addEventListener('click', function() {
+        termsModal.style.display = 'none';
+    });
+
+    termsLink.addEventListener('mouseover', function() {
+        termsLink.style.color = '#0056b3';
+    });
+
+    termsLink.addEventListener('mouseout', function() {
+        termsLink.style.color = '#007bff';
+    });
+
+    window.addEventListener('scroll', function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollUpBtn.style.display = 'block';
+        } else {
+            scrollUpBtn.style.display = 'none';
+        }
+    });
+
+    scrollUpBtn.addEventListener('click', function() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+</script>
 </body>
 </html>
