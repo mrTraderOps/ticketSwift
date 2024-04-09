@@ -46,7 +46,7 @@
 
     .form-group input,
     .form-group select {
-        width: 300px;
+        width: 320px;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 40px;
@@ -63,25 +63,28 @@
         background-color: #585858;
         color: #fff;
         border: none;
-        border-radius: 10px;
+        border-radius: 50px;
         cursor: pointer;
         font-family: "Source Sans Pro", Helvetica, sans-serif;
         font-weight: bolder;
+        width: 50px;
+        opacity: 50%;
 
     }
 
     .form-group #continuePasswordBtn {
         position: absolute;
         right: 0;
-        margin-top: 20px;
+        margin-top: 0px;
         padding: 10px;
         background-color: #585858;
         color: #fff;
         border: none;
-        border-radius: 10px;
+        border-radius: 50px;
         cursor: pointer;
         font-family: "Source Sans Pro", Helvetica, sans-serif;
         font-weight: bolder;
+        opacity: 50%;
 
     }
 
@@ -91,26 +94,32 @@
 
     .form-group .password-toggle {
         position: absolute;
-        right: 5px;
-        top: 50%;
+        right: 10px; /* Adjust the position as needed */
+        margin-top: 50px;
         transform: translateY(-50%);
         cursor: pointer;
-        width: 50px;
+        height: 20px;
+        width: 20px;
+        padding: 5px; /* Add padding for better appearance */
+        background-color: #ccc; /* Add background color for better visibility */
+        border-radius: 5px; /* Round the corners */
     }
 
-    .password-toggle img {
+    .toggle-icon {
         position: absolute;
-        top: 40%;
-        transform: translateY(-50%);
-        right: 0px;
-        cursor: pointer;
-       	height: 15px;
-        width: 20px;
         margin-top: 20px;
+        right: 50px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin-right: 30px;
+
     }
 
     #showPass {
-        display: ;
+        font-size: 12px; /* Adjust font size as needed */
+        display: inline; /* Make it inline to appear next to the icon */
     }
 
     .terms {
@@ -179,3 +188,27 @@
         -ms-overflow-style: none; 
         scrollbar-width: none;
     }
+
+    #createAccountBtn {
+        padding: 2px 5px; /* Match padding with button */
+        background-color: #585858;
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+        font-size: 14px;
+        text-decoration: none;
+        display: block;
+        width: 50%; 
+        height: 45px;
+        margin: 10px auto; 
+        border-radius: 4px;
+        font-family: "Source Sans Pro", Helvetica, sans-serif;
+        box-shadow: 0 0 1px rgba(0, 0, 0, .1);
+        font-weight: bolder;
+        color: white;
+        letter-spacing: 3px;
+    }
+
+    #createAccountBtn:hover {
+            background-color: #f2849e; /* Lighter shade of pink on hover */
+        }
