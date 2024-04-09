@@ -6,6 +6,25 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		/* CSS for moving background image effect */
+        .image.main {
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            animation: changeBackground 2s infinite linear; /* Adjust duration as needed */
+        }
+
+        @keyframes changeBackground {
+            0%, 100% {
+                background-image: url('decAveBGpix.jpg'); /* Start and end with the first background image */
+            }
+            50% {
+                background-image: url('decAveBGpix.jpg'); /* Transition to the second background image */
+            }
+        }
+    </style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -46,8 +65,20 @@
 					<div id="main">
 						<div class="inner">
 							<h1>December Avenue</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
-							<p>This is the first description, what is the event all about for/why does the concert takes place in this area? location of event? when is this event</p>
+							<span class="image main"><img src="images/decAveBGpix.jpg" alt="" /></span>
+							<p>Pop rock band December Avenue are celebrating 15 years as a band with a concert this February 11, 2024 at the SM Mall of Asia Arena. <br>
+							<br>
+							The band first announced the show with a teaser on social media revealing the date and location. In a later post, the band shared that ticket details will be released soon. The concert is part of their year-long celebration for their 15th anniversary.
+							Last February, the band’s Langit Mong Bughaw (Your Blue Sky) album achieved the record for being the most streamed OPM album of all time, with over 720 million streams. In an Instagram post sharing the news, the band wrote, “What a way to feel your love on our 15th year as a band! Maraming maraming salamat sa lahat ng patuloy na nagsstream (Thank you so much to everyone who streamed it). We love you, and we hope to see you all this year and say thank you in person!” <br>
+							<br>
+							Langit Mong Bughaw featured the band’s biggest hits, including “Bulong” (Whisper), “Kung Di Rin Lang Ikaw” (If It Wasn’t Just You) featuring Moira dela Torre, “Sa Ngalan Ng Pag-ibig” (In The Name Of Love), and “Huling Sandali” (The Last Moment), to name a few. All four songs have over a hundred million streams apiece, making December Avenue one of the most streamed Filipino artists today. <br>
+
+
+
+
+
+
+						</p>
 							<p>This is the second description, details about reservation how many level such as Bronze, Silver, Gold, VIP seat available tickets, tickets sold.</p>					
 
 							<h2>SELECT YOUR TICKET</h2>
@@ -56,10 +87,10 @@
 									<div class="col-12">
 										<select name="demo-category" id="demo-category">
 											<option value="">Ticket Location</option>
-											<option value="1">Bronze - P124</option>
-											<option value="1">Silver - P213</option>
-											<option value="1">Gold - P123</option>
-											<option value="1">VIP - P435</option>
+											<option value="1">VIP - ₱ 4,410.00</option>
+											<option value="1">Gold - ₱ 3,500.00</option>
+											<option value="1">Silver - ₱ 2,000.00</option>
+											<option value="1">Bronze - ₱ 1,500.00</option>
 										</select>										
 									</div>
 									<div>
@@ -98,7 +129,7 @@
 												<div class="col-12">
 													<div class="btn btn-primary mb-3">
 														<ul class="actions">
-															<li><a href="#" class="button">Pay P1230.00</a></li>
+															<li><a href="#" class="button">Pay ₱ 1,500.00</a></li>
 														</ul>
 													</div>
 												</div>
