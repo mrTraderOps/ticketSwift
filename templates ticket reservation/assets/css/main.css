@@ -313,6 +313,7 @@ input, select, textarea {
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
+		
 	}
 
 		.row > * {
@@ -3352,5 +3353,36 @@ input, select, textarea {
 
 		}
 	
+section > img {
+	width: 500px;
+	height: 500px;
+	padding: 20px;
+}
+section > p {
+	padding: 40px;
+}
 
-			
+article {
+	padding: 30px;
+}
+
+.detailsDecAve {
+	padding: 10px;
+}
+	.detailsDecAve > p {
+		padding: 10px;
+	}
+	.detailsDecAve > section {
+		display: flex;
+		flex-direction: row;
+	}
+
+.payment {
+	display: flex;
+	flex-direction: row;
+	padding: 50px;
+}
+	.payment > .payment-details{
+		
+	}
+	
