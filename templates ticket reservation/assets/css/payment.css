@@ -9,8 +9,8 @@ max-height: 100vh;
 height: 100%;
 }
 
-.container{
-  height: 100vh;
+.container {
+  height: 80vh;
 }
 
 .card{
@@ -128,9 +128,30 @@ form .container {
     }
     .right-container {
       background-color: white;
-      padding: 30px 10%;
+      padding: 30px 5%;
     }
-    
+
 .card-body {
   display: none;
 }
+.payment-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.summary-container {
+  width: 200px;
+}
+  table {
+    width: 200px;
+    border-spacing: 10px;
+  
+  }
+    tr {
+      text-align: center;
+    }
+.receipt-container > button {
+  margin-top: 10px;
+  margin-left: 150px;
+}
+
