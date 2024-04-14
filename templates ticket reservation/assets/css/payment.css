@@ -1,14 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
 
 
-html, body{
-background-color:#f5eee7;
-font-family: "Poppins", sans-serif;
-font-weight: 300;
-max-height: 100vh;
-height: 100%;
-}
-
 .container {
   height: 80vh;
 }
@@ -67,8 +59,7 @@ text-indent: 25px;
 }
 
 .card-text{
-
-font-size: 13px;
+font-size: 15px;
 margin-left: 6px;
 }
 
@@ -124,11 +115,12 @@ form .container {
   }
     .left-container {
       background-color: white;
-      padding: 30px 10%;
+      padding: 30px 5%;
     }
     .right-container {
       background-color: white;
       padding: 30px 5%;
+      width: 100vh;
     }
 
 .card-body {
@@ -137,13 +129,15 @@ form .container {
 .payment-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .summary-container {
-  width: 200px;
+  width: 30vw;
+  max-width: fit-content;
 }
   table {
-    width: 200px;
+    width: 300px;
     border-spacing: 10px;
   
   }
@@ -152,6 +146,30 @@ form .container {
     }
 .receipt-container > button {
   margin-top: 10px;
-  margin-left: 150px;
+  float: right;
+}
+  .receipt-container > h3 {
+    padding: 10px 0%;
+  }
+.credit-card-container, .icons, .card-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
+.icons, .card-title {
+  gap: 5px;
+}
+
+.credit-card-container > span {
+  margin-right: 10px;
+}
+
+.left-container > span {
+  margin-bottom: 10px;
+}
+
+.purchase-here {
+  text-align: center;
+}
